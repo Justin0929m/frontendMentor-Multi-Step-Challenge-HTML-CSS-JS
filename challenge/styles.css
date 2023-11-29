@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -9,12 +10,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
+  color: #000;
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
 }
 
 .container {
   display: flex;
-  background-color: crimson;
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -22,7 +25,6 @@ body {
 .sidebar {
   width: max-content;
   border-radius: 10px;
-  outline: 1px solid black;
 }
 
 .sidebar-img {
@@ -41,14 +43,24 @@ body {
   padding: 2rem;
 }
 
+.main-heading {
+  padding: 2rem;
+}
+
+.main-text {
+  padding-block: 0.5rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  margin: 0.5rem 2rem;
 }
 
 input {
   border-radius: 10px;
   padding: 0.5rem;
+  margin-block: 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

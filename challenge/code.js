@@ -1,30 +1,57 @@
-const captureInputs = {
-    inputName: document.querySelector('#input-name'),
-    nextBtn: document.querySelector('#next-btn'),
-    form: document.querySelector('.form'),
+// const captureInputs = {
+//     inputName: document.querySelector('#input-name'),
+//     nextBtn: document.querySelector('#next-btn'),
+//     form: document.querySelector('.form'),
     
-    setLocalStorage: function(){
+//     setLocalStorage: function(){
        
         
-        let inputNameValue = this.inputName.value
-        localStorage.setItem("input", JSON.stringify(inputNameValue));
-        let getLocal = JSON.parse(localStorage.getItem("input"));
+//         let inputNameValue = this.inputName.value
+//         localStorage.setItem("input", JSON.stringify(inputNameValue));
+//         let getLocal = JSON.parse(localStorage.getItem("input"));
 
-        return getLocal
-    } 
-}
+//         return getLocal
+//     } 
+// }
 
-const fetchInputValues = {
-    fetchValues: function(){
+// const fetchInputValues = {
+//     fetchValues: function(){
         
-        console.log(JSON.parse(localStorage.getItem('input')));
-    }
+//         console.log(JSON.parse(localStorage.getItem('input')));
+//     }
+// }
+
+// window.addEventListener('load', ()=>{
+//     fetchInputValues.fetchValues()
+//     // console.log('testing');
+// })
+
+
+// captureInputs.setLocalStorage()
+
+// Step 1 JS 
+
+
+function setLocalStorage(){
+    let nameInput = document.querySelector('#input-name')
+
+    localStorage.setItem('input-field', JSON.stringify(nameInput.value))
 }
 
-window.addEventListener('load', ()=>{
-    fetchInputValues.fetchValues()
-    // console.log('testing');
-})
+
+// Step 2 JS
+
+function fetchLocal(){
+    let inputName = document.querySelector('#input-name')
+    
+    let inputArr = JSON.parse(localStorage.getItem('input-field'))
+    console.log("Local Storage: ", inputArr);
+
+    inputName.value = inputArr
+    // location.href = '/challenge/index.html'
+
+}
+
+fetchLocal()
 
 
-captureInputs.setLocalStorage()
